@@ -163,7 +163,7 @@ Instructions: Respond as Finago, the AI financial assistant. Follow all guidelin
               </span>
               <div className="message-content">
                 {message.role === 'assistant' ? (
-                  <TypingText text={message.content} delay={5} />
+                  <TypingText text={message.content.replace(/\*\*/g, '')} delay={5} />
                 ) : (
                   message.content
                 )}
