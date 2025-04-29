@@ -39,22 +39,21 @@ const Chat = ({ userData }) => {
 
   
   const cleanResponse = (text) => {
-  
-    text = text.replace(/\*\*Option \d+.*?\*\*:\s*/gi, '');
+
+    text = text.replace(/#{1,6}\s/g, '');
+    
+
+    text = text.replace(/\*\*/g, '');
     
     
-    text = text.replace(/\*\*(Which option is best.*?)\*\*/gi, '');
-    text = text.replace(/\*\*(Assuming.*?)\*\*/gi, '');
+    text = text.replace(/\s+/g, ' ');
     
+    text = text.replace(/\s*\*\s*/g, '\n• ');
     
-    if (text.includes("**Option") || text.includes("context")) {
-      const sentences = text.split(/(?<=[.!?])\s+/);
-      const lastSentences = sentences.slice(-5).join(' '); 
-      
-      if (lastSentences.length > 20) {
-        text = lastSentences;
-      }
-    }
+
+    text = text.replace(/\.\s+/g, '.\n\n');
+
+    text = text.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     return text.trim();
   };
@@ -163,7 +162,7 @@ Instructions: Respond as Finago, the AI financial assistant. Follow all guidelin
               </span>
               <div className="message-content">
                 {message.role === 'assistant' ? (
-                  <TypingText text={message.content.replace(/\*\*/g, '')} delay={5} />
+                  <TypingText text={cleanResponse(message.content)} delay={5} />
                 ) : (
                   message.content
                 )}
