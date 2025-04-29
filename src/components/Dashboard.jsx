@@ -154,7 +154,7 @@ const Dashboard = ({ userData, onLogout }) => {
               {showWelcome && (
                 <h2>
                   <TypingText 
-                    text={`Hello ${userData?.name || 'User'},`} 
+                    text={`# Hello ${userData?.name || 'User'},`} 
                     delay={30} 
                     onComplete={() => setShowLine2(true)}
                   />
@@ -163,7 +163,7 @@ const Dashboard = ({ userData, onLogout }) => {
               {showLine2 && (
                 <p>
                   <TypingText 
-                    text="Welcome to Finago - India's First AI Financial Advisor! 🚀" 
+                    text="## Welcome to Finago - India's First AI Financial Advisor! 🚀" 
                     delay={20} 
                     onComplete={() => setShowLine3(true)}
                   />
@@ -172,7 +172,7 @@ const Dashboard = ({ userData, onLogout }) => {
               {showLine3 && (
                 <p>
                   <TypingText 
-                    text="Say goodbye to worries—Your Money is in Safe hands." 
+                    text="### Say goodbye to worries—Your Money is in Safe hands." 
                     delay={20} 
                     onComplete={() => setShowLine4(true)}
                   />
@@ -181,7 +181,7 @@ const Dashboard = ({ userData, onLogout }) => {
               {showLine4 && (
                 <p>
                   <TypingText 
-                    text="Let AI grow, manage, and secure your wealth effortlessly! 🤖💰" 
+                    text="#### Let AI grow, manage, and secure your wealth effortlessly! 🤖💰" 
                     delay={20} 
                     onComplete={() => setShowLine5(true)}
                   />
@@ -190,7 +190,7 @@ const Dashboard = ({ userData, onLogout }) => {
               {showLine5 && (
                 <p>
                   <TypingText 
-                    text="Now India will be able to Finance - Boost Your Savings with AI" 
+                    text="##### Now India will be able to Finance - Boost Your Savings with AI" 
                     delay={20} 
                   />
                 </p>
