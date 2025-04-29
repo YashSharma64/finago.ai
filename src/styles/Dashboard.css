@@ -273,13 +273,14 @@
 .nav-menu {
   display: flex;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: #09090b;
   padding: 0.5rem;
   border-radius: 12px;
   margin: 1rem;
   overflow-x: auto;
   white-space: nowrap;
   justify-content: space-between;
+  border: 1px solid rgba(32, 28, 28, 0.1);
 }
 
 .nav-item {
@@ -289,30 +290,50 @@
   padding: 0.5rem 0.8rem;
   background: none;
   border: none;
-  color: white;
+  color: #a0aec0;
   font-size: 0.9rem;
   cursor: pointer;
   border-radius: 8px;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
   flex-shrink: 0;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-item:focus, .nav-item:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.nav-item:active {
+  color: #FFF4A3 !important;
+  animation: goldenPulse 0.5s ease;
+}
+
+@keyframes goldenPulse {
+  0% { color: #FFF4A3; }
+  50% { color: #FFF4A3; }
+  100% { color: #FFF4A3; }
 }
 
 .nav-item.active {
-  background: rgba(255, 255, 255, 0.1);
+  color: #FFF4A3;
 }
 
 .nav-item:hover:not(.disabled) {
-  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
 }
 
 .nav-item.disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  color: #a0aec0;
 }
 
 .nav-item small {
   font-size: 0.8rem;
   opacity: 0.7;
+  color: #a0aec0;
 }
 
 .welcome-box {
@@ -332,7 +353,7 @@
 }
 
 .welcome-box p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0;
   color: #a0aec0;
   line-height: 1.6;
   min-height: 1.6em;
