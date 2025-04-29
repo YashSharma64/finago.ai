@@ -1,10 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Dashboard.css';
 import Chat from './Chat';
+import TypingText from './TypingText';
 
 const Dashboard = ({ userData, onLogout }) => {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
+  const [showWelcome, setShowWelcome] = useState(false);
+  const [showLine2, setShowLine2] = useState(false);
+  const [showLine3, setShowLine3] = useState(false);
+  const [showLine4, setShowLine4] = useState(false);
+  const [showLine5, setShowLine5] = useState(false);
   const profileMenuRef = useRef(null);
 
   const toggleProfileMenu = () => {
@@ -23,6 +29,18 @@ const Dashboard = ({ userData, onLogout }) => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    if (activeTab === 'home') {
+      setShowWelcome(true);
+    } else {
+      setShowWelcome(false);
+      setShowLine2(false);
+      setShowLine3(false);
+      setShowLine4(false);
+      setShowLine5(false);
+    }
+  }, [activeTab]);
 
   const handleLogout = () => {
     setShowProfileMenu(false);
@@ -140,11 +158,50 @@ const Dashboard = ({ userData, onLogout }) => {
 
           {activeTab === 'home' ? (
             <div className="welcome-box">
-              <h2>Hello {userData?.name || 'User'},</h2>
-              <p>Welcome to Finago - India's First AI Financial Advisor! 🚀</p>
-              <p>Say goodbye to worries—Your Money is in Safe hands.</p>
-              <p>Let AI grow, manage, and secure your wealth effortlessly! 🤖💰</p>
-              <p>Now India will be able to Finance - Boost Your Savings with AI</p>
+              {showWelcome && (
+                <h2>
+                  <TypingText 
+                    text={`Hello ${userData?.name || 'User'},`} 
+                    delay={30} 
+                    onComplete={() => setShowLine2(true)}
+                  />
+                </h2>
+              )}
+              {showLine2 && (
+                <p>
+                  <TypingText 
+                    text="Welcome to Finago - India's First AI Financial Advisor! 🚀" 
+                    delay={20} 
+                    onComplete={() => setShowLine3(true)}
+                  />
+                </p>
+              )}
+              {showLine3 && (
+                <p>
+                  <TypingText 
+                    text="Say goodbye to worries—Your Money is in Safe hands." 
+                    delay={20} 
+                    onComplete={() => setShowLine4(true)}
+                  />
+                </p>
+              )}
+              {showLine4 && (
+                <p>
+                  <TypingText 
+                    text="Let AI grow, manage, and secure your wealth effortlessly! 🤖💰" 
+                    delay={20} 
+                    onComplete={() => setShowLine5(true)}
+                  />
+                </p>
+              )}
+              {showLine5 && (
+                <p>
+                  <TypingText 
+                    text="Now India will be able to Finance - Boost Your Savings with AI" 
+                    delay={20} 
+                  />
+                </p>
+              )}
             </div>
           ) : activeTab === 'ai-advisor' ? (
             <Chat userData={userData} />
