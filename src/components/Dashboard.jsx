@@ -77,14 +77,6 @@ const Dashboard = ({ userData, onLogout }) => {
                     <span className="item-icon">👤</span>
                     My Account
                   </button>
-                  <button className="menu-item">
-                    <span className="item-icon">⚙️</span>
-                    Settings
-                  </button>
-                  <button className="menu-item">
-                    <span className="item-icon">❓</span>
-                    Help & Support
-                  </button>
                   <button className="menu-item logout" onClick={handleLogout}>
                     <span className="item-icon">🚪</span>
                     Logout
@@ -145,9 +137,10 @@ const Dashboard = ({ userData, onLogout }) => {
               <span className="nav-icon">🤖</span>
               <span>AI Financial Advisor</span>
             </button>
-            <button className="nav-item">
+            <button className="nav-item disabled">
               <span className="nav-icon">📈</span>
               <span>Smart Stock Insights</span>
+              <small>(Coming Soon...)</small>
             </button>
             <button className="nav-item disabled">
               <span className="nav-icon">💳</span>
