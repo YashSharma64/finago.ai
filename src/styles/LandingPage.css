@@ -70,7 +70,6 @@
   margin: 0 auto;
   gap: 3rem;
   margin-top: 150px;
-  min-height: 100vh;
 }
 
 .logo {
@@ -314,11 +313,10 @@
 
   .main-content {
     margin-top: 80px;
-    padding: 2rem 1rem 8rem;
+    padding: 2rem 1rem 12rem;
     gap: 4rem;
     width: 100%;
     box-sizing: border-box;
-    min-height: 100vh;
   }
 
   .logo {
@@ -371,7 +369,7 @@
     padding: 2rem 1rem;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
 
   .about-container {
@@ -430,9 +428,8 @@
 
   .main-content {
     margin-top: 60px;
-    padding: 1.5rem 0.5rem 6rem;
+    padding: 1.5rem 0.5rem 10rem;
     gap: 3rem;
-    min-height: 100vh;
   }
 
   .logo {
@@ -471,7 +468,7 @@
 
   .about-section {
     padding: 1.5rem 0.5rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
 
   .about-content {
@@ -537,7 +534,7 @@
 
   .about-section {
     padding: 1rem 0.5rem;
-    margin-top: 2.5rem;
+    margin-top: 4rem;
   }
 
   .about-content {
@@ -571,9 +568,8 @@
 
   .main-content {
     margin-top: 60px;
-    padding: 1rem 0.5rem 4rem;
+    padding: 1rem 0.5rem 8rem;
     gap: 2.5rem;
-    min-height: 100vh;
   }
 }
 
