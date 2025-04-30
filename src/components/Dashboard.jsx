@@ -127,14 +127,14 @@ const Dashboard = ({ userData, onLogout }) => {
               className={`nav-item ${activeTab === 'home' ? 'active' : ''}`}
               onClick={() => handleTabChange('home')}
             >
-              <span className="nav-icon">🏠</span>
+              <span className="nav-icon"><img src="/icons8-home-48 (1).png" alt="Home" /></span>
               <span>Home</span>
             </button>
             <button 
               className={`nav-item ${activeTab === 'ai-advisor' ? 'active' : ''}`}
               onClick={() => handleTabChange('ai-advisor')}
             >
-              <span className="nav-icon">🤖</span>
+              <span className="nav-icon"><img src="/icons8-ai-chatting-50.png" alt="AI Financial Advisor" /></span>
               <span>AI Financial Advisor</span>
             </button>
             <button className="nav-item disabled">
@@ -225,3 +225,4 @@ const Dashboard = ({ userData, onLogout }) => {
 };
 
 export default Dashboard;
+
