@@ -7,7 +7,7 @@
 
 .landing-page {
   min-height: 100vh;
-  background-color: white;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
 }
@@ -29,6 +29,7 @@
 .small-logo {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .nav-text {
@@ -36,7 +37,8 @@
   font-size: 1.2rem;
   font-weight: 300;
   text-align: center;
-  margin-left: 7rem;
+  flex: 2;
+  margin: 0;
 }
 
 .login-button {
@@ -309,6 +311,10 @@
     margin-left: 1rem;
     font-size: 1rem;
     display: none;
+  }
+
+  .nav-buttons {
+    flex: 0;
   }
 
   .main-content {
@@ -636,5 +642,220 @@
 
   .footer-address {
     text-align: center;
+  }
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.dark-mode-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.mode-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover .mode-icon {
+  transform: scale(1.1);
+}
+
+
+.landing-page.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.landing-page.dark-mode .navbar {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.landing-page.dark-mode .nav-text {
+  color: #ffffff;
+}
+
+.landing-page.dark-mode .main-heading {
+  color: #ffffff;
+}
+
+.landing-page.dark-mode .bottom-text {
+  color: #ffffff;
+}
+
+.landing-page.dark-mode .about-section {
+  background-color: #1e1e1e;
+}
+
+.landing-page.dark-mode .about-content {
+  background-color: #121212;
+}
+
+.landing-page.dark-mode .about-content p {
+  color: #ffffff;
+}
+
+.landing-page.dark-mode .about-title {
+  color: #ffffff;
+}
+
+.landing-page.dark-mode .founder-card {
+  background-color: #1e1e1e;
+}
+
+.landing-page.dark-mode .founder-info h3 {
+  color: #ffffff;
+}
+
+.landing-page.dark-mode .founder-info p {
+  color: #ffffff;
+}
+
+.landing-page.dark-mode .contact {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.landing-page.dark-mode .footer {
+  background-color: #1e1e1e;
+}
+
+.landing-page.dark-mode .footer-brand h3,
+.landing-page.dark-mode .footer-address h3 {
+  color: #ffffff;
+}
+
+.landing-page.dark-mode .footer-brand p,
+.landing-page.dark-mode .footer-address p {
+  color: #ffffff;
+}
+
+.landing-page.dark-mode .logo-text {
+  color: #fdf0a5;
+  text-shadow: none;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.landing-page.dark-mode .animated-logo-text {
+  color: hsl(51, 77%, 81%);
+  text-shadow: none;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.landing-page.dark-mode .small-logo circle {
+  stroke: #fdf0a5;
+}
+
+.landing-page.dark-mode .small-logo text {
+  fill: #fdf0a5;
+}
+
+.landing-page.dark-mode .logo circle {
+  stroke: #fdf0a5;
+}
+
+.landing-page.dark-mode .logo text {
+  fill: #fdf0a5;
+}
+
+.landing-page.dark-mode .blinking-cursor {
+  color: #fdf0a5;
+  text-shadow: 0 0 10px rgba(253, 240, 165, 0.3);
+}
+
+.landing-page.dark-mode .mission {
+  color: #fdf0a5 !important;
+  text-shadow: 0 0 10px rgba(253, 240, 165, 0.3);
+  font-weight: 500;
+  text-align: center !important;
+  font-size: 1.2rem !important;
+  margin: 3rem 0;
+  line-height: 2 !important;
+}
+
+.landing-page.dark-mode .login-button {
+  background-color: #fdf0a5;
+  color: #121212;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: none;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.landing-page.dark-mode .login-button:hover {
+  background-color: #fff3b8;
+  transform: translateY(-1px);
+  box-shadow: none;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.landing-page.dark-mode .get-started-button {
+  background-color: #fdf0a5;
+  color: #121212;
+  border: none;
+  padding: 1rem 4rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  margin-top: 0.1rem;
+  margin-bottom: 5rem;
+  box-shadow: none;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.landing-page.dark-mode .get-started-button:hover {
+  background-color: #fff3b8;
+  transform: translateY(-2px);
+  box-shadow: none;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(253, 240, 165, 0.3);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(253, 240, 165, 0.4);
+  }
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 10px rgba(253, 240, 165, 0.3),
+                 0 0 20px rgba(253, 240, 165, 0.2),
+                 0 0 30px rgba(253, 240, 165, 0.1);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(253, 240, 165, 0.4),
+                 0 0 30px rgba(253, 240, 165, 0.3),
+                 0 0 40px rgba(253, 240, 165, 0.2);
   }
 }
