@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from './Logo';
 import '../styles/LandingPage.css';
 
 const LandingPage = ({ onGetStarted, onLoginClick }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark-mode');
+  };
+
   return (
-    <div className="landing-page">
+    <div className={`landing-page ${isDarkMode ? 'dark-mode' : ''}`}>
       <nav className="navbar">
         <div className="small-logo">
           <svg width="60" height="60" viewBox="0 0 100 100">
@@ -13,7 +20,16 @@ const LandingPage = ({ onGetStarted, onLoginClick }) => {
           </svg>
         </div>
         <div className="nav-text">Your Money is in Safe Hands</div>
-        <button className="login-button" onClick={onLoginClick}>login/Register</button>
+        <div className="nav-buttons">
+          <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+            <img 
+              src={isDarkMode ? "/icons8-do-not-disturb-ios-30.png" : "/icons8-dark-mode-30.png"} 
+              alt={isDarkMode ? "Light Mode" : "Dark Mode"} 
+              className="mode-icon"
+            />
+          </button>
+          <button className="login-button" onClick={onLoginClick}>login/Register</button>
+        </div>
       </nav>
       
       <main className="main-content">
@@ -32,15 +48,15 @@ const LandingPage = ({ onGetStarted, onLoginClick }) => {
           
           <div className="about-content">
             <p>
-              Finago is India’s first AI-powered financial advisor built to simplify money management for every Indian. Our mission is to empower individuals with smart, data-driven financial decisions through intuitive technology, without needing complex knowledge or manual effort. Whether it’s tracking expenses, optimizing savings, or planning investments—Finago is your all-in-one financial guide.
+              Finago is India's first AI-powered financial advisor built to simplify money management for every Indian. Our mission is to empower individuals with smart, data-driven financial decisions through intuitive technology, without needing complex knowledge or manual effort. Whether it's tracking expenses, optimizing savings, or planning investments—Finago is your all-in-one financial guide.
             </p>
             
             <p>
-              We combine the power of artificial intelligence and automation to help users understand their spending habits, receive personalized financial insights, and stay in control of their financial journey. By securely integrating with users’ bank accounts and payment data, Finago delivers timely suggestions, savings tips, and actionable advice—all in a user-friendly interface designed for Indian lifestyles.
+              We combine the power of artificial intelligence and automation to help users understand their spending habits, receive personalized financial insights, and stay in control of their financial journey. By securely integrating with users' bank accounts and payment data, Finago delivers timely suggestions, savings tips, and actionable advice—all in a user-friendly interface designed for Indian lifestyles.
             </p>
             
             <p>
-              At Finago, we believe managing money shouldn’t be stressful. That’s why we’ve created a seamless experience where users can monitor their finances, set personal goals, and unlock smarter ways to save and grow. With a deep understanding of the Indian mindset, Finago is not just another finance app—it’s your trusted financial companion for everyday life.
+              At Finago, we believe managing money shouldn't be stressful. That's why we've created a seamless experience where users can monitor their finances, set personal goals, and unlock smarter ways to save and grow. With a deep understanding of the Indian mindset, Finago is not just another finance app—it's your trusted financial companion for everyday life.
             </p>
             
             <p className="mission">
