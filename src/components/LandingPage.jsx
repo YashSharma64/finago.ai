@@ -119,15 +119,15 @@ const LandingPage = ({ onGetStarted, onLoginClick }) => {
           <div className="footer-contact-col exact-footer-center">
             <div className="footer-col-title">Contact Us</div>
             <div className="footer-contact-row">
-              <img src="/mail.svg" alt="Email" className="footer-contact-icon" />
+              <img src="/mail.png" alt="Email" className="footer-contact-icon" />
               <span>yashsharma.aiml@gmail.com</span>
             </div>
             <div className="footer-contact-row">
-              <img src="/phone.svg" alt="Phone" className="footer-contact-icon" />
+              <img src="/contact.png" alt="Phone" className="footer-contact-icon" />
               <span>+91 9711132445</span>
             </div>
             <div className="footer-contact-row">
-              <img src="/location.svg" alt="Location" className="footer-contact-icon" />
+              <img src="/location.png" alt="Location" className="footer-contact-icon" />
               <span>YourSpace Hostel, Porwal Road, Lohegaon</span>
             </div>
           </div>
