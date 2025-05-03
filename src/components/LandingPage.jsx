@@ -88,17 +88,56 @@ const LandingPage = ({ onGetStarted, onLoginClick }) => {
       </section>
 
       <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-brand">
-            <h3>finago.ai</h3>
-            <p>Copyright © 2025 Finago.ai</p>
-            <p>All rights reserved.</p>
+        <div className="footer-main-row exact-footer-layout">
+          <div className="footer-brand-col exact-footer-center">
+            <div className="footer-logo-title-row exact-footer-center">
+              <svg width="60" height="60" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#f6e7a1" strokeWidth="8" />
+                <text x="50" y="65" textAnchor="middle" fill="#f6e7a1" fontSize="40">$</text>
+              </svg>
+              <span className="footer-brand-title">finago.ai</span>
+            </div>
+            <div className="footer-tagline">India's First AI Financial Advisor</div>
+            <div className="footer-social-row exact-footer-center">
+              <a href="https://www.linkedin.com/in/yash-sharma-6960ab326/" target="_blank" rel="noopener noreferrer">
+                <img src="/Linkedin.png" alt="LinkedIn" className="footer-social-icon" />
+              </a>
+              <a href="https://wa.me/919711132445" target="_blank" rel="noopener noreferrer">
+                <img src="/whatsapp.png" alt="WhatsApp" className="footer-social-icon" />
+              </a>
+            </div>
           </div>
-          <div className="footer-address">
-            <h3>Address</h3>
-            <p>Contact us - +91 9711132445</p>
-            <p>YourSpace Hostel, Porwal Road , Lohegaon</p>
+          <div className="footer-services-col exact-footer-center">
+            <div className="footer-col-title">Services</div>
+            <div className="footer-col-list">
+              <div>AI Financial Advisor</div>
+              <div>Smart Budgeting</div>
+              <div>Investment Growth</div>
+              <div>Finago Rewards</div>
+            </div>
           </div>
+          <div className="footer-contact-col exact-footer-center">
+            <div className="footer-col-title">Contact Us</div>
+            <div className="footer-contact-row">
+              <img src="/mail.svg" alt="Email" className="footer-contact-icon" />
+              <span>yashsharma.aiml@gmail.com</span>
+            </div>
+            <div className="footer-contact-row">
+              <img src="/phone.svg" alt="Phone" className="footer-contact-icon" />
+              <span>+91 9711132445</span>
+            </div>
+            <div className="footer-contact-row">
+              <img src="/location.svg" alt="Location" className="footer-contact-icon" />
+              <span>YourSpace Hostel, Porwal Road, Lohegaon</span>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom-row exact-footer-bottom">
+          <span>Copyright © 2025 Finago.ai. All rights reserved.</span>
+          <span className="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </span>
         </div>
       </footer>
     </div>
